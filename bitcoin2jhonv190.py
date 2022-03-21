@@ -561,7 +561,7 @@ def open_wallet(walletfile, writable=False):
         return db
 
 def inversetxid(txid):
-        if len(txid) is not 64:
+        if len(txid) != 64:
                 sys.stdout.write("Bad txid")
                 return "CORRUPTEDTXID:" + txid
         new_txid = ""
